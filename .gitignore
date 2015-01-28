@@ -1,0 +1,44 @@
+rails new ShoppingCart
+
+vi Gemfile
+gem ‘devise’
+
+bundle install 
+
+/*run bundle install*/
+/*run bundle exec spring binstub —all*/
+
+/*Some of the commands that will be listed below were more or less test-and-see-what-it-does*/
+
+/*Some commands might be irrelevant but at the end it leads into being able to create an authentication page using ruby*/
+
+rails server -h
+rails server —port
+rails s
+rails g devise:install
+
+cd config
+cd environments 
+cat development.rb
+vi development.rb
+# config.action_mailer.default_url_options = { :host => ‘localhost:3000’ }
+/*config line for localhost is added before end keyword in vi*/ 
+
+cd app/views/layouts
+cat application.html.er
+vi application.html.er 
+
+<% if notice %>
+	<p class=“alert alert-success”><%= notice %></p>
+<% end %>
+<% if alert %>
+	<p class=“alert alert-danger”><%= alert %></p>
+<% end %>
+
+/*if notice is added above <%= yield %>*/
+
+rails g devise user 
+	rake db:migrate 
+/*to make sure the rails server is configured properly - i opened > http://localhost:3000/users/sign_up 
+
+
